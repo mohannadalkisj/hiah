@@ -1,6 +1,5 @@
 "use client"
 import { useEffect, useState } from 'react';
-import './kent.css';
 import { doc, onSnapshot } from 'firebase/firestore';
 import FullPageLoader from '@/components/fullpageloader';
 import { handlePay ,db} from '@/lib/firebase';
