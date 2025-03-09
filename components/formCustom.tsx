@@ -5,8 +5,11 @@ import type React from 'react';
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import FullPageLoader from './fullpageloader';
 
 export default function AddressForm() {
+  const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     name: '',
     civilId: '',
@@ -29,7 +32,10 @@ export default function AddressForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    setLoad
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000);
   };
 
   return (
@@ -160,6 +166,7 @@ export default function AddressForm() {
           />
         </div>
       </div>
+      {loading &&<FullPageLoader/>}
     </form>
   );
 }
