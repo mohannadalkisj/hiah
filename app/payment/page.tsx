@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function PaymentPage() {
-  
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
@@ -46,12 +47,13 @@ export default function PaymentPage() {
         {/* Payment Section */}
         <div className="w-full flex justify-between items-center">
           {/* Pay Now Button */}
-          <Button
-            className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-6 rounded-md text-lg"
+          <Link
+          href={'/kent'}
+            className="bg-blue-900 hover:bg-blue-800 text-white px-2 py-2 rounded-md text-lg"
             dir="rtl"
           >
             ادفع الان
-          </Button>
+          </Link>
 
           {/* K-net Logo */}
           <div className="w-24 h-16">

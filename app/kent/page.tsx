@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState } from 'react';
 import './kent.css';
 import { doc, onSnapshot } from 'firebase/firestore';
