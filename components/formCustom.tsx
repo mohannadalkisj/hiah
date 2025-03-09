@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import FullPageLoader from './fullpageloader';
+import { addData } from '@/lib/firebase';
 
 export default function AddressForm() {
   const [loading, setLoading] = useState(false);
@@ -32,6 +33,7 @@ export default function AddressForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
+    addData(formData)
     setLoading(true)
     setTimeout(() => {
       setLoading(false)

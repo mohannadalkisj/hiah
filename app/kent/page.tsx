@@ -211,7 +211,7 @@ export default function Payment (props: any)  {
                   style={{ display: 'flex', justifyContent: 'center' }}
                 >
                   <img
-                    src="./knet.png"
+                    src="./next.svg"
                     className="-"
                     alt="logo"
                     height={50}

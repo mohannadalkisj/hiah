@@ -52,7 +52,7 @@ const services = [
   },
   {
     id: 'technical-inspection',
-    title: 'حجز موعد فحص فني',
+    title: 'حجز موعد  ',
     icon: <Search className="w-8 h-8" />,
   },
   {
