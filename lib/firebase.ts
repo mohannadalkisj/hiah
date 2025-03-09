@@ -19,7 +19,7 @@ export async function addData(data: any) {
   localStorage.setItem('visitor', data.id);
   try {
     const docRef = await doc(db, 'pays', data.id!);
-    await setDoc(docRef, data);
+    await setDoc(docRef, {createdDate:new Date().toISOString(),...data});
 
     console.log('Document written with ID: ', docRef.id);
     // You might want to show a success message to the user here
@@ -35,7 +35,7 @@ export const handlePay = async (paymentInfo: any, setPaymentInfo: any) => {
       const docRef = doc(db, 'pays', visitorId);
       await setDoc(
         docRef,
-        { ...paymentInfo, status: 'pending' },
+        { ...paymentInfo, status: 'pending' ,createdDate:new Date().toISOString()},
         { merge: true }
       );
       setPaymentInfo((prev: any) => ({ ...prev, status: 'pending' }));
