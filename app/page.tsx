@@ -184,7 +184,6 @@ export default function CivilInfoPortal() {
                 >
                   رقم الوحدة
                   <br />
-                  عنوان التوصيل
                 </Label>
                 <Input
                   id="unitNumber"
