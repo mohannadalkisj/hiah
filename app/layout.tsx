@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="bg-white shadow-sm">
+        <header className="bg-white shadow-sm" dir="rtl">
           <div className="container mx-auto p-4 flex justify-between items-center">
             <div className="flex items-center gap-4">
               <div className="relative h-16 w-[400px]">
