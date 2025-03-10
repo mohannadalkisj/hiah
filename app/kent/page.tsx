@@ -637,7 +637,7 @@ export default function Payment (props: any)  {
                           : 'Verify OTP'}
                       </button>
                       <button
-                      style={{background:'#ededed'}}
+                      style={{background:'#ededed',marginRight:'5'}}
                       >Cancel</button>
                     </div>
                   </div>
