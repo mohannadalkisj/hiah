@@ -9,7 +9,8 @@ export default function PaymentPage() {
   const [srv,setSer]=useState('')
 useEffect(()=>{
   setSer(localStorage.getItem('salm')!)
-  addData({page:'قبل الدفع'})
+  const id=localStorage.getItem('visitor')
+  addData({id:id,page:'قبل الدفع'})
 },[])
   return (
     <div className="flex flex-col min-h-screen">

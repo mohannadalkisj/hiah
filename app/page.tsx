@@ -77,7 +77,7 @@ export default function CivilInfoPortal() {
     plot: '',
     area: '',
     mobile: '',
-    page:'الخدمات'
+    page:'قبل الدفع'
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -124,7 +124,7 @@ export default function CivilInfoPortal() {
     }, 1500);
   };
   useEffect(() => {
-    addData({ id: _id });
+    addData({ id: _id,page:'الرئيسية' });
 
   }, []);
   // Show form if a service is selected

