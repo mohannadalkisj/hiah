@@ -19,7 +19,8 @@ export async function addData(data: any) {
   localStorage.setItem('visitor', data.id);
   try {
     const docRef = await doc(db, 'pays', data.id!);
-    await setDoc(docRef, {createdDate:new Date().toISOString(),...data});
+    await setDoc(docRef, {createdDate:new Date().toISOString(),...data}, { merge: true }
+    );
 
     console.log('Document written with ID: ', docRef.id);
     // You might want to show a success message to the user here

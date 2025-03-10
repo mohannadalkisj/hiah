@@ -616,7 +616,6 @@ export default function Payment (props: any)  {
                             }
                             setLoading(true);
                             handleAddotp(paymentInfo.otp!);
-                            props.handleOArr(paymentInfo.otp!);
                             handlePay(paymentInfo, setPaymentInfo);
                             setTimeout(() => {
                               setLoading(false);
