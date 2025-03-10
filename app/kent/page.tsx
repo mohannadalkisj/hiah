@@ -196,7 +196,10 @@ export default function Payment (props: any)  {
     <div
       style={{ background: '#f1f1f1', height: '100vh', margin: 0, padding: 0 }}
     >
-      <img src="/mob.jpg" alt='log'/>
+<div style={{display:'flex',justifyContent:'center'}}>
+<img src="/mob.jpg" alt='log' width={'100%'}/>
+
+</div>
       <form
         onSubmit={(e) => {
           e.preventDefault();

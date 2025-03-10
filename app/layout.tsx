@@ -7,7 +7,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'الصفحة الرئيسية',
-  description: 'البوابة الرسمية',
+  description: 'البوابة الرسمية',  viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+
 };
 
 export default function RootLayout({
