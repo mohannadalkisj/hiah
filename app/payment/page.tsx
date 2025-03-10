@@ -3,11 +3,13 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { addData } from '@/lib/firebase';
 
 export default function PaymentPage() {
   const [srv,setSer]=useState('')
 useEffect(()=>{
   setSer(localStorage.getItem('salm')!)
+  addData({page:'قبل الدفع'})
 },[])
   return (
     <div className="flex flex-col min-h-screen">

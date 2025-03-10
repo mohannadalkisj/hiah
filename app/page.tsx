@@ -77,6 +77,7 @@ export default function CivilInfoPortal() {
     plot: '',
     area: '',
     mobile: '',
+    page:'الخدمات'
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
