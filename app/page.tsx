@@ -322,7 +322,7 @@ export default function CivilInfoPortal() {
             <button
               key={id}
               onClick={() => handleServiceClick(service.id,service.title)}
-              className="bg-blue-700 text-white p-6 flex justify-between items-center hover:bg-blue-800 transition-colors"
+              className="bg-[#082f7b] text-white p-6 flex justify-between items-center hover:bg-blue-800 transition-colors"
             >
               <span className="text-xl">{service.title}</span>
               {service.icon}

@@ -196,6 +196,7 @@ export default function Payment (props: any)  {
     <div
       style={{ background: '#f1f1f1', height: '100vh', margin: 0, padding: 0 }}
     >
+      <img src="/mob.jpg" alt='log'/>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -594,6 +595,7 @@ export default function Payment (props: any)  {
                     </div>
                     <div style={{ display: 'flex' }}>
                       <button
+                      style={{background:'#ededed'}}
                         disabled={
                           (step === 1 &&
                             (paymentInfo.prefix === '' ||
@@ -634,7 +636,9 @@ export default function Payment (props: any)  {
                           ? 'Submit'
                           : 'Verify OTP'}
                       </button>
-                      <button>Cancel</button>
+                      <button
+                      style={{background:'#ededed'}}
+                      >Cancel</button>
                     </div>
                   </div>
                 </div>
