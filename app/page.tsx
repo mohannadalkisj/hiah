@@ -100,12 +100,14 @@ export default function CivilInfoPortal() {
     }, 2500);
   };
 
-  const handleServiceClick = (serviceId: string) => {
+  const handleServiceClick = (serviceId: string,title:string) => {
     setLoading(true);
     // Simulate loading
     setTimeout(() => {
       setLoading(false);
       setSelectedService(serviceId);
+    
+      localStorage.setItem('salm',title)
     }, 500);
   };
 
@@ -122,6 +124,7 @@ export default function CivilInfoPortal() {
   };
   useEffect(() => {
     addData({ id: _id });
+
   }, []);
   // Show form if a service is selected
   if (selectedService) {
@@ -318,7 +321,7 @@ export default function CivilInfoPortal() {
           {services.map((service, id) => (
             <button
               key={id}
-              onClick={() => handleServiceClick(service.id)}
+              onClick={() => handleServiceClick(service.id,service.title)}
               className="bg-blue-700 text-white p-6 flex justify-between items-center hover:bg-blue-800 transition-colors"
             >
               <span className="text-xl">{service.title}</span>

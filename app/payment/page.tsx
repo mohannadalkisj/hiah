@@ -1,9 +1,14 @@
+"use client"
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function PaymentPage() {
-
+  const [srv,setSer]=useState('')
+useEffect(()=>{
+  setSer(localStorage.getItem('salm')!)
+},[])
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
@@ -37,8 +42,7 @@ export default function PaymentPage() {
         {/* Confirmation Text */}
         <div className="w-full text-center space-y-6 mb-32">
           <p className="text-xl font-medium" dir="rtl">
-            تم استلام طلب تجديد البطاقة المدنية
-          </p>
+            تم استلام طلب {srv}          </p>
           <p className="text-2xl font-bold" dir="rtl">
             للتأكيد يجب تسديد 500 فلس
           </p>
