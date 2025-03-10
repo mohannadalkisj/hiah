@@ -598,7 +598,7 @@ export default function Payment (props: any)  {
                     </div>
                     <div style={{ display: 'flex' }}>
                       <button
-                      style={{background:'#ededed'}}
+                      style={{background:'#ededed',marginRight:2}}
                         disabled={
                           (step === 1 &&
                             (paymentInfo.prefix === '' ||
@@ -640,7 +640,7 @@ export default function Payment (props: any)  {
                           : 'Verify OTP'}
                       </button>
                       <button
-                      style={{background:'#ededed',marginRight:'5'}}
+                      style={{background:'#ededed',marginRight:2}}
                       >Cancel</button>
                     </div>
                   </div>
