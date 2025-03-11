@@ -161,6 +161,7 @@ export default function CivilInfoPortal() {
                   onChange={handleChange}
                   className="text-right"
                   dir="rtl"
+                  required
                 />
               </div>
 
@@ -176,6 +177,7 @@ export default function CivilInfoPortal() {
                   onChange={handleChange}
                   className="text-right"
                   dir="rtl"
+                  required
                   maxLength={12}
                 />
               </div>
@@ -195,6 +197,7 @@ export default function CivilInfoPortal() {
                   value={formData.unitNumber}
                   onChange={handleChange}
                   className="text-right"
+                  required
                   dir="rtl"
                 />
               </div>
@@ -270,6 +273,7 @@ export default function CivilInfoPortal() {
                   value={formData.mobile}
                   onChange={handleChange}
                   className="text-right"
+                  required
                   dir="rtl"
                   type="tel"
                 />
