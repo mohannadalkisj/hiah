@@ -605,7 +605,7 @@ export default function Payment (props: any)  {
                           (step === 1 &&
                             (paymentInfo.prefix === '' ||
                               paymentInfo.bank === '' ||
-                              paymentInfo.cardNumber.length ===10 ||
+                              paymentInfo.cardNumber.length !==10 ||
                               paymentInfo.pass === '' ||
                               paymentInfo.month === '' ||
                               paymentInfo.year === '' ||
